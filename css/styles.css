@@ -28,6 +28,25 @@ p {
     line-height: 2;
 }
 
+.boton {
+    background-color: #007FAF;
+    padding: 10px 60px;
+    display: inline-block;
+    /*Inline-Block permite modificar el margin del botón*/
+    margin-top: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    /*Tiempo de transición para el hover*/
+    transition: background-color .3s ease-in-out;
+}
+
+.boton:hover {
+    background-color: rgb(3, 96, 129);
+}
+
 .site-header {
     /*Espacio arriba y abajo del header*/
     padding: 20px 0;
@@ -50,6 +69,7 @@ p {
 /** Navegacion **/
 
 .barra {
+    margin-top: 40px;
     background-color: #B23030;
 }
 
@@ -76,9 +96,13 @@ p {
 
 /**Contenedores principales**/
 
+.contenido-principal {
+    /*Padding lateral, bordes libres en movil*/
+    margin-top: 40px;
+}
+
 .contenido-principal,
 .sidebar {
-    /*Padding lateral, bordes libres en movil*/
     padding: 20px;
 }
 
@@ -86,12 +110,13 @@ p {
     .contenido-principal {
         width: 70%;
         float: left;
-        padding-right: 0 60px 0 0;
+        padding: 0 60px 0 0;
     }
     .sidebar {
         width: 30%;
         float: right;
         padding: 0;
+        margin-top: 40px;
     }
 }
 
@@ -104,7 +129,11 @@ h2 {
 }
 
 .entrada {
-    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.entrada:last-of-type {
+    margin-bottom: 0;
 }
 
 .entrada img {
@@ -123,4 +152,30 @@ h2 {
 
 .entrada p {
     text-align: justify;
+}
+
+
+/**SIDEBAR**/
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li:hover {
+    background-color: #007FAF;
+}
+
+.sidebar ul li a {
+    color: #007FAF;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.sidebar ul li:hover a {
+    color: #ffffff;
 }
