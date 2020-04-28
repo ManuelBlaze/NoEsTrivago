@@ -1,0 +1,62 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/**GLOBALES**/
+
+body {
+    /*Fuente del sitio*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+    /*Imagenes responsivas*/
+    max-width: 100%;
+}
+
+.site-header {
+    /*Espacio arriba y abajo del header*/
+    padding: 20px 0;
+}
+
+.contenedor {
+    /*Centrar el espacio con margenes laterales*/
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/** Navegacion **/
+
+.barra {
+    background-color: #B23030;
+}
+
+.navegacion-principal a {
+    /*links navbar*/
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal a {
+        display: inline-block;
+    }
+}
+
+.navegacion-principal a:hover {
+    background-color: #007FAF;
+}
