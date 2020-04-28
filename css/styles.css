@@ -23,6 +23,11 @@ img {
     max-width: 100%;
 }
 
+p {
+    font-size: 16px;
+    line-height: 2;
+}
+
 .site-header {
     /*Espacio arriba y abajo del header*/
     padding: 20px 0;
@@ -32,6 +37,13 @@ img {
     /*Centrar el espacio con margenes laterales*/
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.clearfix::after {
+    /*Arreglar floats*/
+    content: '';
+    clear: both;
+    display: block;
 }
 
 
@@ -59,4 +71,56 @@ img {
 
 .navegacion-principal a:hover {
     background-color: #007FAF;
+}
+
+
+/**Contenedores principales**/
+
+.contenido-principal,
+.sidebar {
+    /*Padding lateral, bordes libres en movil*/
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .contenido-principal {
+        width: 70%;
+        float: left;
+        padding-right: 0 60px 0 0;
+    }
+    .sidebar {
+        width: 30%;
+        float: right;
+        padding: 0;
+    }
+}
+
+
+/**Entradas de Blog**/
+
+h2 {
+    color: #007FAF;
+    margin-bottom: 20px;
+}
+
+.entrada {
+    margin-top: 30px;
+}
+
+.entrada img {
+    /*Imagen ocupe todo el espacio*/
+    display: block;
+}
+
+@media (min-width: 480px) {
+    /*Hacer que el texto fluya sobre la imagen a la izquierda*/
+    .entrada img {
+        width: 300px;
+        float: left;
+        margin: 0 30px 0 0;
+    }
+}
+
+.entrada p {
+    text-align: justify;
 }
